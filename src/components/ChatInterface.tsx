@@ -10,7 +10,6 @@ const ChatInterface = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const chatContainerRef = useRef<HTMLDivElement>(null);
 
-  // Add welcome message when component mounts
   useEffect(() => {
     const welcomeMessage: Message = {
       id: uuidv4(),
@@ -21,7 +20,6 @@ const ChatInterface = () => {
     setMessages([welcomeMessage]);
   }, []);
 
-  // Auto scroll to bottom when new messages arrive
   useEffect(() => {
     if (!isUserScrolling) {
       scrollToBottom();
